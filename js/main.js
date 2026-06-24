@@ -156,19 +156,84 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // --- Contact Form Handling ---
+  var leadWebhookUrl = 'https://hooks.leadmaker.agency/webhook/ba065b07-8a1c-4827-af29-809c1be1dbad';
+
+  function buildContactPayload(formElement) {
+    var formData = new FormData(formElement);
+    return {
+      firstName: (formData.get('firstName') || '').toString().trim(),
+      lastName: (formData.get('lastName') || '').toString().trim(),
+      email: (formData.get('email') || '').toString().trim(),
+      phone: (formData.get('phone') || '').toString().trim(),
+      company: (formData.get('company') || '').toString().trim(),
+      service: (formData.get('service') || '').toString().trim(),
+      location: (formData.get('location') || '').toString().trim(),
+      message: (formData.get('message') || '').toString().trim(),
+      pageUrl: window.location.href,
+      submittedAt: new Date().toISOString(),
+      source: 'bluecoreshield-contact-form',
+      userAgent: navigator.userAgent
+    };
+  }
+
+  async function sendLeadToWebhook(payload) {
+    // Try standard CORS first so we can detect server errors when allowed.
+    try {
+      var corsResponse = await fetch(leadWebhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (corsResponse.ok) {
+        return true;
+      }
+    } catch (corsError) {
+      // Ignore and retry as no-cors below.
+    }
+
+    // Fallback for endpoints that do not send CORS headers.
+    try {
+      var fallbackBody = new URLSearchParams();
+      Object.keys(payload).forEach(function (key) {
+        fallbackBody.append(key, payload[key] == null ? '' : String(payload[key]));
+      });
+
+      await fetch(leadWebhookUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: fallbackBody.toString()
+      });
+
+      return true;
+    } catch (fallbackError) {
+      return false;
+    }
+  }
+
   var contactForm = document.getElementById('contactForm');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+    contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       var submitBtn = contactForm.querySelector('button[type="submit"]');
       var originalText = submitBtn.innerHTML;
+      var payload = buildContactPayload(contactForm);
 
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
       submitBtn.disabled = true;
+      submitBtn.style.background = '';
+      submitBtn.style.borderColor = '';
 
-      setTimeout(function () {
+      var wasSent = await sendLeadToWebhook(payload);
+
+      if (wasSent) {
         submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
         submitBtn.style.background = '#10B981';
         submitBtn.style.borderColor = '#10B981';
@@ -181,7 +246,19 @@ document.addEventListener('DOMContentLoaded', function () {
           submitBtn.style.background = '';
           submitBtn.style.borderColor = '';
         }, 3000);
-      }, 1500);
+        return;
+      }
+
+      submitBtn.innerHTML = '<i class="fas fa-triangle-exclamation"></i> Try Again';
+      submitBtn.style.background = '#DC2626';
+      submitBtn.style.borderColor = '#DC2626';
+
+      setTimeout(function () {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.style.background = '';
+        submitBtn.style.borderColor = '';
+      }, 3000);
     });
   }
 
