@@ -14,8 +14,6 @@ permalink: "/blog/armed-security-guards-new-york-hiring-guide-costs/"
 
 A single violent incident can cost far more than a lifetime of prevention. For property owners, event organizers, and business managers in New York, deciding whether to hire armed security is not just a budget question, it is a risk management decision. This guide explains how armed security guards New York clients hire, what legal and training requirements to verify, and how much you should expect to pay.
 
-Introduction
-
 When you search for armed security guards New York, you are probably weighing three things: risk, compliance, and cost. This article walks through when armed guards are appropriate, the licensing and training you must verify, typical service models, real-world cost ranges, and negotiating tactics that protect your safety and your budget. The aim is to give you enough detail to request accurate proposals, compare bids meaningfully, and sign a contract that matches your needs.
 
 Do you really need an armed security guard?

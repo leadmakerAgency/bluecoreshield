@@ -14,8 +14,6 @@ permalink: "/blog/armed-security-guards-new-york-costs-licensing-hiring/"
 
 New York streets can feel safe or suddenly exposed, depending on who is standing between your asset and a threat. For businesses, buildings, and events that need more than deterrence, armed security guards offer a higher level of protection. Hiring them in New York, however, requires navigating strict licensing rules, variable costs, and careful vendor selection. If you are responsible for procuring security, understanding how armed security guards New York works will save time, reduce liability, and deliver a solution that actually fits your risk.
 
-Introduction
-
 When a client asked why their new midtown retail store still felt vulnerable despite cameras and an alarm, the answer was simple. Detection and response are different things. Cameras record. An armed guard actively reduces the chance that a robbery will occur and provides an immediate response if it does. That advantage comes with legal obligations, higher cost, and extra oversight. This article explains who needs armed guards, the licensing and regulatory steps in New York, typical pricing and what drives it, hiring options, and how to manage armed officers on site so you get protection without unexpected risk.
 
 Who typically hires armed security in New York

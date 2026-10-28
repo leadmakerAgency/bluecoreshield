@@ -3,7 +3,7 @@ layout: "blog-post.njk"
 title: "Armed Security Guards New York: Hiring Guide & Costs"
 slug: "armed-security-guards-new-york-hiring-guide-costs"
 date: "2026-10-16T14:03:14.093Z"
-excerpt: "Hook A crowded Manhattan storefront closes early after a weekend theft. The property manager calls a security company, but the agency sends an unarmed guard who cannot legally detain the suspect. Weeks later the shop owner considers an arme"
+excerpt: "A crowded Manhattan storefront closes early after a weekend theft. The property manager calls a security company, but the agency sends an unarmed guard who cannot legally detain the suspect. Weeks later the shop owner considers an arme"
 featured_image: "/media/image-armed-security-guards-new-york-hiring-guide-costs.png"
 hero_emoji: ""
 tags:
@@ -12,11 +12,7 @@ tags:
 permalink: "/blog/armed-security-guards-new-york-hiring-guide-costs/"
 ---
 
-Hook
-
 A crowded Manhattan storefront closes early after a weekend theft. The property manager calls a security company, but the agency sends an unarmed guard who cannot legally detain the suspect. Weeks later the shop owner considers an armed guard but worries about cost, licensing, and liability. Hiring the wrong guard can cost far more than money. It can expose your business to legal risk, damage customer trust, and fail the one thing security must always deliver, confidence.
-
-Introduction
 
 If you are responsible for protecting people, property, or high-value assets in New York, understanding how armed security works matters. This article explains when armed security guards make sense, what legal and licensing hurdles you must clear, how to evaluate guards and firms, and what you should expect to pay. The goal is practical guidance you can act on right away, whether you manage a retail chain, run construction sites, organize public events, or need executive protection.
 

@@ -3,7 +3,7 @@ layout: "blog-post.njk"
 title: "Armed Security Guards New York: Licensing, Costs & Hiring"
 slug: "armed-security-guards-new-york-licensing-costs-hiring"
 date: "2026-09-13T14:02:39.146Z"
-excerpt: "Hook When a jewelry store, corporate office, or construction site in New York asks for an armed presence, they are asking for more than a uniform and a gun. The decision carries legal obligations, ongoing costs, and operational tradeoffs th"
+excerpt: "When a jewelry store, corporate office, or construction site in New York asks for an armed presence, they are asking for more than a uniform and a gun. The decision carries legal obligations, ongoing costs, and operational tradeoffs th"
 featured_image: "/media/image-armed-security-guards-new-york-licensing-costs-hiring.png"
 hero_emoji: ""
 tags:
@@ -12,11 +12,7 @@ tags:
 permalink: "/blog/armed-security-guards-new-york-licensing-costs-hiring/"
 ---
 
-Hook
-
 When a jewelry store, corporate office, or construction site in New York asks for an armed presence, they are asking for more than a uniform and a gun. The decision carries legal obligations, ongoing costs, and operational tradeoffs that many businesses do not anticipate until an incident or audit forces the issue.
-
-Introduction
 
 Armed security guards New York is more than a procurement line on a budget. It is a regulated professional service that intersects criminal justice rules, municipal permitting, labor markets, insurance requirements, and day-to-day risk management. This article explains how licensing works, what you can expect to pay, how hiring typically happens, and the practical questions to answer before you bring armed personnel onto your property.
 
