@@ -1,4 +1,12 @@
+const path = require("path");
 const { shouldHideInProduction } = require("./lib/post-visibility");
+const { isSupersededDuplicate, prepareN8nPosts } = require("./lib/n8n-posts");
+
+// The article workflow can publish the same title more than once; keep the newest post per slug
+const duplicateGroups = prepareN8nPosts(path.join(__dirname, "content", "posts"));
+if (duplicateGroups.length > 0) {
+  console.log(`[n8n] Resolved ${duplicateGroups.length} duplicate slug group(s); keeping the newest post for each slug.`);
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("index.html");
@@ -55,6 +63,7 @@ module.exports = function (eleventyConfig) {
       .getFilteredByGlob("content/posts/*.md")
       .filter(
         (post) =>
+          !isSupersededDuplicate(post.inputPath) &&
           !shouldHideInProduction({
             date: post.date,
             draft: post.data?.draft,
